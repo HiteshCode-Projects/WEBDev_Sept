@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ball{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+
+            background-color: red;
+            animation: bounce 8s infinite;
+        }
+
+
+        @keyframes bounce{
+            0%{opacity: 1; background-color: red;}
+
+            50%{opacity: 0;}
+
+
+            75%{opacity: 0,5; background-color: blue;}
+
+
+            100%{opacity: 1; background-color: green;}
+        }
+    </style>
+</head>
+<body>
+    <div class="ball">
+
+    </div>
+</body>
+</html>
