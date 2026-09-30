@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //Multiple Data 
+
+       //1. Array : Help us to store multiple data at the same time- Diffrent Data types
+       // Symbol : [] Sqaure Bracket 
+       //Rule : Indexno(Position no) Starts ZERO - 0
+
+       let students = ["ayush","keerthi","siya","madhura","manthan",123, 565, true]
+
+       //Total No of Data in Array = .length
+       console.log(students.length)
+      //ArrayName[Indexno]
+       console.log(students[4])
+
+       console.log(students[7])
+
+       console.log(students[9])
+
+
+       // Collection of Data - object symbol - { key:value pair     }
+
+       let employee = {
+            //key(left):value(right)
+            name:"om",
+            dept:"IT",
+            EmId:"EM001",
+            salry:60000,
+            loginStatus:false,
+       }
+        
+
+       //objectname.keyname
+       console.log(employee.salry)
+       console.log(employee.name)
+
+
+
+       //Real Life Example - Store the Data of Cafe Menu
+
+       let cafeMenu = [
+            
+        {name:"Coffee", price:100},
+
+        {name:"Tea",price:80},
+
+        {name:"Sandwich",price:150}
+
+       ]
+
+       console.log(cafeMenu[2].name, cafeMenu[2].price)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
