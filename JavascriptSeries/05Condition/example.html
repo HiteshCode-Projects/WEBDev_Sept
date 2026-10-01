@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //Logic - Give User The Cafe Menu and Let User Order From Menu 
+    // Bill is more than 150 - 10% dsicunt and calucate Final Bill
+
+    //CAFE MENU
+    let cafeMenu = [
+         
+     {name:"Coffe", price:100},
+
+     {name:"Tea",price:80},
+
+     {name:"Coke", price:50},
+
+    ]
+
+    console.log("User Choice : ")
+
+    console.log("1st Product " , cafeMenu[0].name , "2nd Product " , cafeMenu[1].name)
+    console.log("Price 1 " , cafeMenu[0].price , "Price 2 " , cafeMenu[1].price)
+
+    let Totalbill = cafeMenu[0].price  + cafeMenu[1].price
+
+    if(Totalbill>=150){
+
+        //10 % - 10/100 = 0.1
+        
+        let DicountedBill = Totalbill - (Totalbill * 0.1)
+                        // Totalbill * 0.9 
+
+        console.log("Bill After Discount " , DicountedBill)
+
+    }else{
+
+        console.log("Total Bill" , Totalbill)
+    }
+
+    console.log(DicountedBill) 
+
+
+
+</script>
+</body>
+</html>
