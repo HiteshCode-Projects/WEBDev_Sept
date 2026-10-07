@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <button onclick="greet()">Login/Greet</button>
+
+
+    <script>
+         //Function - To do Specific Task
+          
+         //1. function-keyword functioname(){  //Body-Instruction  }
+
+         function greet(){
+
+            console.log("Good evening Welcome")
+
+            alert('Welcome Back User')
+
+         }
+
+         // greet()  //Calling The Function 
+
+
+
+         //2. function with parameter (parameter or argument- act like varaible)
+
+         function greeting(name){
+               
+            console.log("Welcome Bacck " , name)
+         }
+
+         greeting("Dharnesh")
+         greeting("Aayush")
+         greeting("manthan")
+
+
+         //3. function with return keyword
+         function bill(price , quanity){
+
+            return price * quanity
+
+         }
+
+         let result =   bill(100,2)
+         console.log(result)
+
+
+
+         console.log(bill(200,3))
+
+
+         //Arrow Function:  ()=>
+
+        let add =  (a,b)=> a +b 
+
+       console.log(  add(2,7))
+
+
+    </script>
+</body>
+</html>
