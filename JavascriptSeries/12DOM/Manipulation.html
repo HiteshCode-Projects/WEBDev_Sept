@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="loginbtn" onclick="Loginbtn()">Login</button>
+
+    <button id="follow"   onclick="FollowBtn()">Follow</button>
+
+
+    <p id="myp">This is Old Dull Paragaph</p>
+    <button onclick="Updatecss()">Update style</button>
+
+    <script>
+
+         function Loginbtn(){
+
+            const loginbtn = document.getElementById("loginbtn")
+
+            loginbtn.textContent = "Logout"
+
+         }
+
+         function FollowBtn(){
+          const followBtn = document.getElementById("follow")      
+
+          followBtn.textContent = "Following"
+
+
+         }
+
+
+
+         function Updatecss(){
+            const para = document.getElementById("myp")
+
+            para.style.color = "red"
+            para.style.backgroundColor = "black"
+            para.style.textAlign = "center"
+            para.textContent = "New Style Paragraph Tag"
+         }
+
+    </script>
+</body>
+</html>

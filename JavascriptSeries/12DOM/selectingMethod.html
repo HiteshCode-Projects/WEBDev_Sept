@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="myp">This is Paragraph Tag</p>
+
+    <div class="box">Div Box - 0</div>
+    <div class="box">Div Box - 1</div>
+
+    <p>This is Second Paragaph</p>
+
+
+ <script>
+
+   // document = WEBPAGE
+   // Element  = Tag
+
+    const para  =  document.getElementById("myp")  //Slected HTML Paragraph in JS
+
+    console.log(para)
+
+    console.log(para.textContent)
+
+    const box = document.getElementsByClassName("box")
+
+    console.log(box)
+    console.log(box[1])
+
+    console.log(box[1].textContent)  
+
+
+    const ptag = document.getElementsByTagName("p")
+
+    console.log(ptag)
+
+    console.log(ptag[0])
+
+
+  //   querySelector : It Follows CSS Rule - #Idname , .className , TagnAme
+  // It Will only Select The First Element/Tag
+
+        const boxes = document.querySelector(".box")
+
+        console.log(boxes)
+
+     
+        
+        const container = document.querySelectorAll(".box")
+        console.log(container)
+
+
+ </script>   
+
+</body>
+</html>
