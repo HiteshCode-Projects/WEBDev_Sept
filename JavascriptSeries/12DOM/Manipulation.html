@@ -12,7 +12,14 @@
 
 
     <p id="myp">This is Old Dull Paragaph</p>
+
     <button onclick="Updatecss()">Update style</button>
+
+    <div id="mydiv">
+        This is Div 
+    </div>
+    
+    <button onclick="updateTag()">Update Div</button>
 
     <script>
 
@@ -41,6 +48,28 @@
             para.style.backgroundColor = "black"
             para.style.textAlign = "center"
             para.textContent = "New Style Paragraph Tag"
+         }
+
+
+         function updateTag(){
+            
+            // innerHTML - Update The Tag Istelf
+            const box = document.getElementById("mydiv")
+
+
+            //Update Into 1 Tag
+          //   box.innerHTML = "<h1>Heading Tag</h1>"
+
+           
+         //Multiple Tags
+          box.innerHTML = `
+          <h2>Second</h2>
+          <button>Greet</button>
+          <p>This is Paragpag</p>
+          `
+
+
+
          }
 
     </script>
