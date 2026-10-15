@@ -77,11 +77,24 @@ skill.textContent = student.skill;
 const status = document.createElement("p")
 status.textContent = "Status : " + student.status
 
+//Add all the child elements to the card
+card.appendChild(name)
+card.appendChild(course)
+card.appendChild(skill)
+card.appendChild(status)
 
 
+container.appendChild(card)
 
 
 })
+
+
+const cards =  document.querySelectorAll(".profile-card")
+
+cards[1].classList.add("highlight")
+
+
 
 
 
