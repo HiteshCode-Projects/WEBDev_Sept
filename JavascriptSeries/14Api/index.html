@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+          //fetch('Api Addresss') : To Get The Data from API
+          // RULE : Convert THE API Response into JSON(javscript Object notation) Format .json()
+
+          fetch('https://randomuser.me/api')
+
+
+          //1.successfull
+           .then( response =>response.json())
+
+           .then(data => console.log(data))
+
+
+
+
+
+          //2. unsuccessull - Error
+          .catch( function(error){
+                  console.log('Error Connection ', error)
+          })
+
+
+
+    </script>   
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="cat" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqtqrN4QCprZPWpPZQpgw2x9pidxHdEjLK3qLpQYsGKA&s=10" height="300" width="300">
+
+    <button id="btn" onclick="getImage()">Get Cat</button>
+
+    <script>
+        function getImage(){
+
+              const catImage = document.getElementById("cat")
+
+              fetch('https://api.thecatapi.com/v1/images/search')
+
+              .then(res => res.json())
+
+              .then( data => catImage.src = data[0].url)
+
+
+              .catch(err => console.log('Error Getting Image ', err))
+
+        }
+    </script>
+</body>
+</html>
