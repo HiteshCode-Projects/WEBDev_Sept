@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <header>
+          <h1 id="pageTitle">Student Explorer</h1>
+          <p>Explore Student Profile </p>
+   </header>
+
+
+   <main class="container">
+    <section class="search-panel">
+            <h2>Find Profiles</h2>
+
+
+          <div class="search-controls">
+            <input type="text" id="searchInput" placeholder="Search by name or email">
+
+            <button id="seachBtn">Search</button>
+            <button id="loadBtn">Load All Profiles</button>
+
+            <p id="status">click Load All Profiles to begin</p>
+            <p id="profileCount">Profiles displayed : 0</p>
+          </div>
+
+    </section>
+
+    <section id="profileContainer" class="profiles">
+            <!-- API PROFILE CARD WILL DISPLAY -->
+    </section>
+
+   </main>
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
