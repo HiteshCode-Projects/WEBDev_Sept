@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        .container{
+            background: white;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        input{
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button{
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Regitser/Login</h2>
+
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="abc@gmail.com" required>
+        <input type="password" id="password" placeholder="******" required>
+
+        <button onclick="register()">Register</button>
+        <button onclick="login()">Login</button>
+
+        <p id="resmsg"></p>
+    </div>
+
+     <script>
+
+      async function  register(){
+        
+        const username =     document.getElementById('name').value
+        const email   =      document.getElementById('email').value
+        const password =     document.getElementById('password').value
+
+
+        //Fronetnd - Backend Connection
+        const response = await    fetch('http://localhost:3000/register',{
+            method:'POST',   //Method Name in Capital Letter
+            headers:{"Content-Type":"application/json"},
+            body:    JSON.stringify({username,email,password})
+        });
+
+
+        const result   =   await response.json();
+        document.getElementById("resmsg").innerText = result.message
+
+      }
+
+
+      async function login() {
+
+        const email   =      document.getElementById('email').value
+        const password =     document.getElementById('password').value
+
+
+                const response =  await   fetch('http://localhost:3000/login',{
+                        method:'POST',   //Method Name in Capital Letter
+                        headers:{"Content-Type":"application/json"},
+                        body:    JSON.stringify({email,password})
+                });
+
+                 const result   =   await response.json()
+                 document.getElementById("resmsg").innerText = result.message
+        
+      }
+
+     </script>    
+</body>
+</html>
